@@ -1,0 +1,194 @@
+[12-Nov-2022 13:32:16 Asia/Dhaka] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/jellyhub/public_html/mano/mat/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/jellyhub/public_html/mano/mat/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /home/jellyhub/public_html/mano/mat/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=loca...', 'root', '', Array)
+#2 /home/jellyhub/public_html/mano/mat/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
+#3 /home/jellyhub/public_html/mano/mat/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(184): Illuminate\Database\Connectors\MySqlConnecto in /home/jellyhub/public_html/mano/mat/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 705
+[12-Nov-2022 13:32:18 Asia/Dhaka] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in /home/jellyhub/public_html/mano/mat/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:70
+Stack trace:
+#0 /home/jellyhub/public_html/mano/mat/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(70): PDO->__construct('mysql:host=loca...', 'root', '', Array)
+#1 /home/jellyhub/public_html/mano/mat/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(46): Illuminate\Database\Connectors\Connector->createPdoConnection('mysql:host=loca...', 'root', '', Array)
+#2 /home/jellyhub/public_html/mano/mat/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=loca...', Array, Array)
+#3 /home/jellyhub/public_html/mano/mat/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(184): Illuminate\Database\Connectors\MySqlConnecto in /home/jellyhub/public_html/mano/mat/vendor/laravel/framework/src/Illuminate/Database/Connection.php on line 705
+[12-Dec-2022 17:55:44 Asia/Dhaka] PHP Fatal error:  Uncaught Symfony\Component\Routing\Exception\RouteNotFoundException: Route [profile-settings] not defined. in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:444
+Stack trace:
+#0 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(739): Illuminate\Routing\UrlGenerator->route('profile-setting...', 36, true)
+#1 /home/jellyhub/public_html/vignesh/cmatrimony/storage/framework/views/299c77568f14d46ba8d6b3db9be23334e30d7202.php(39): route('profile-setting...', 36)
+#2 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/jellyhub/...')
+#3 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#4 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/View/Engines/ in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php on line 444
+[12-Dec-2022 17:55:53 Asia/Dhaka] PHP Fatal error:  Uncaught Symfony\Component\Routing\Exception\RouteNotFoundException: Route [profile-settings] not defined. in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:444
+Stack trace:
+#0 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(739): Illuminate\Routing\UrlGenerator->route('profile-setting...', 36, true)
+#1 /home/jellyhub/public_html/vignesh/cmatrimony/storage/framework/views/299c77568f14d46ba8d6b3db9be23334e30d7202.php(39): route('profile-setting...', 36)
+#2 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/jellyhub/...')
+#3 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#4 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/View/Engines/ in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php on line 444
+[12-Dec-2022 17:55:57 Asia/Dhaka] PHP Fatal error:  Uncaught Symfony\Component\Routing\Exception\RouteNotFoundException: Route [profile-settings] not defined. in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:444
+Stack trace:
+#0 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(739): Illuminate\Routing\UrlGenerator->route('profile-setting...', 36, true)
+#1 /home/jellyhub/public_html/vignesh/cmatrimony/storage/framework/views/299c77568f14d46ba8d6b3db9be23334e30d7202.php(39): route('profile-setting...', 36)
+#2 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/jellyhub/...')
+#3 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#4 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/View/Engines/ in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php on line 444
+[12-Dec-2022 17:56:12 Asia/Dhaka] PHP Fatal error:  Uncaught Symfony\Component\Routing\Exception\RouteNotFoundException: Route [profile-settings] not defined. in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:444
+Stack trace:
+#0 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(739): Illuminate\Routing\UrlGenerator->route('profile-setting...', 36, true)
+#1 /home/jellyhub/public_html/vignesh/cmatrimony/storage/framework/views/299c77568f14d46ba8d6b3db9be23334e30d7202.php(39): route('profile-setting...', 36)
+#2 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/jellyhub/...')
+#3 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#4 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/View/Engines/ in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php on line 444
+[12-Dec-2022 17:56:22 Asia/Dhaka] PHP Fatal error:  Uncaught Symfony\Component\Routing\Exception\RouteNotFoundException: Route [profile-settings] not defined. in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:444
+Stack trace:
+#0 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(739): Illuminate\Routing\UrlGenerator->route('profile-setting...', 36, true)
+#1 /home/jellyhub/public_html/vignesh/cmatrimony/storage/framework/views/299c77568f14d46ba8d6b3db9be23334e30d7202.php(39): route('profile-setting...', 36)
+#2 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/jellyhub/...')
+#3 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#4 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/View/Engines/ in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php on line 444
+[12-Dec-2022 17:56:58 Asia/Dhaka] PHP Fatal error:  Uncaught Symfony\Component\Routing\Exception\RouteNotFoundException: Route [profile-settings] not defined. in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:444
+Stack trace:
+#0 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(739): Illuminate\Routing\UrlGenerator->route('profile-setting...', 36, true)
+#1 /home/jellyhub/public_html/vignesh/cmatrimony/storage/framework/views/299c77568f14d46ba8d6b3db9be23334e30d7202.php(39): route('profile-setting...', 36)
+#2 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/jellyhub/...')
+#3 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#4 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/View/Engines/ in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php on line 444
+[12-Dec-2022 17:57:06 Asia/Dhaka] PHP Fatal error:  Uncaught Symfony\Component\Routing\Exception\RouteNotFoundException: Route [profile-settings] not defined. in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:444
+Stack trace:
+#0 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(739): Illuminate\Routing\UrlGenerator->route('profile-setting...', 36, true)
+#1 /home/jellyhub/public_html/vignesh/cmatrimony/storage/framework/views/299c77568f14d46ba8d6b3db9be23334e30d7202.php(39): route('profile-setting...', 36)
+#2 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/jellyhub/...')
+#3 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#4 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/View/Engines/ in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php on line 444
+[12-Dec-2022 17:58:36 Asia/Dhaka] PHP Fatal error:  Uncaught Symfony\Component\Routing\Exception\RouteNotFoundException: Route [profile-settings] not defined. in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:444
+Stack trace:
+#0 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(739): Illuminate\Routing\UrlGenerator->route('profile-setting...', 36, true)
+#1 /home/jellyhub/public_html/vignesh/cmatrimony/storage/framework/views/299c77568f14d46ba8d6b3db9be23334e30d7202.php(39): route('profile-setting...', 36)
+#2 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/jellyhub/...')
+#3 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#4 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/View/Engines/ in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php on line 444
+[12-Dec-2022 17:59:57 Asia/Dhaka] PHP Fatal error:  Uncaught Symfony\Component\Routing\Exception\RouteNotFoundException: Route [profile-settings] not defined. in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:444
+Stack trace:
+#0 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(739): Illuminate\Routing\UrlGenerator->route('profile-setting...', 36, true)
+#1 /home/jellyhub/public_html/vignesh/cmatrimony/storage/framework/views/299c77568f14d46ba8d6b3db9be23334e30d7202.php(39): route('profile-setting...', 36)
+#2 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/jellyhub/...')
+#3 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#4 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/View/Engines/ in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php on line 444
+[12-Dec-2022 18:00:07 Asia/Dhaka] PHP Fatal error:  Uncaught Symfony\Component\Routing\Exception\RouteNotFoundException: Route [profile-settings] not defined. in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:444
+Stack trace:
+#0 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(739): Illuminate\Routing\UrlGenerator->route('profile-setting...', 36, true)
+#1 /home/jellyhub/public_html/vignesh/cmatrimony/storage/framework/views/299c77568f14d46ba8d6b3db9be23334e30d7202.php(39): route('profile-setting...', 36)
+#2 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/jellyhub/...')
+#3 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#4 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/View/Engines/ in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php on line 444
+[12-Dec-2022 18:00:13 Asia/Dhaka] PHP Fatal error:  Uncaught Symfony\Component\Routing\Exception\RouteNotFoundException: Route [profile-settings] not defined. in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:444
+Stack trace:
+#0 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(739): Illuminate\Routing\UrlGenerator->route('profile-setting...', 36, true)
+#1 /home/jellyhub/public_html/vignesh/cmatrimony/storage/framework/views/299c77568f14d46ba8d6b3db9be23334e30d7202.php(39): route('profile-setting...', 36)
+#2 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/jellyhub/...')
+#3 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#4 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/View/Engines/ in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php on line 444
+[12-Dec-2022 18:01:06 Asia/Dhaka] PHP Fatal error:  Uncaught Symfony\Component\Routing\Exception\RouteNotFoundException: Route [profile-settings] not defined. in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:444
+Stack trace:
+#0 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(739): Illuminate\Routing\UrlGenerator->route('profile-setting...', 36, true)
+#1 /home/jellyhub/public_html/vignesh/cmatrimony/storage/framework/views/299c77568f14d46ba8d6b3db9be23334e30d7202.php(39): route('profile-setting...', 36)
+#2 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/jellyhub/...')
+#3 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#4 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/View/Engines/ in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php on line 444
+[12-Dec-2022 18:01:10 Asia/Dhaka] PHP Fatal error:  Uncaught Symfony\Component\Routing\Exception\RouteNotFoundException: Route [profile-settings] not defined. in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:444
+Stack trace:
+#0 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(739): Illuminate\Routing\UrlGenerator->route('profile-setting...', 36, true)
+#1 /home/jellyhub/public_html/vignesh/cmatrimony/storage/framework/views/299c77568f14d46ba8d6b3db9be23334e30d7202.php(39): route('profile-setting...', 36)
+#2 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/jellyhub/...')
+#3 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#4 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/View/Engines/ in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php on line 444
+[12-Dec-2022 18:01:13 Asia/Dhaka] PHP Fatal error:  Uncaught Symfony\Component\Routing\Exception\RouteNotFoundException: Route [profile-settings] not defined. in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:444
+Stack trace:
+#0 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(739): Illuminate\Routing\UrlGenerator->route('profile-setting...', 36, true)
+#1 /home/jellyhub/public_html/vignesh/cmatrimony/storage/framework/views/299c77568f14d46ba8d6b3db9be23334e30d7202.php(39): route('profile-setting...', 36)
+#2 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/jellyhub/...')
+#3 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#4 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/View/Engines/ in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php on line 444
+[12-Dec-2022 18:01:44 Asia/Dhaka] PHP Fatal error:  Uncaught Symfony\Component\Routing\Exception\RouteNotFoundException: Route [profile-settings] not defined. in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:444
+Stack trace:
+#0 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(739): Illuminate\Routing\UrlGenerator->route('profile-setting...', 36, true)
+#1 /home/jellyhub/public_html/vignesh/cmatrimony/storage/framework/views/299c77568f14d46ba8d6b3db9be23334e30d7202.php(39): route('profile-setting...', 36)
+#2 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/jellyhub/...')
+#3 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#4 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/View/Engines/ in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php on line 444
+[12-Dec-2022 18:01:53 Asia/Dhaka] PHP Fatal error:  Uncaught Symfony\Component\Routing\Exception\RouteNotFoundException: Route [profile-settings] not defined. in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:444
+Stack trace:
+#0 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(739): Illuminate\Routing\UrlGenerator->route('profile-setting...', 36, true)
+#1 /home/jellyhub/public_html/vignesh/cmatrimony/storage/framework/views/299c77568f14d46ba8d6b3db9be23334e30d7202.php(39): route('profile-setting...', 36)
+#2 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/jellyhub/...')
+#3 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#4 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/View/Engines/ in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php on line 444
+[12-Dec-2022 18:07:33 Asia/Dhaka] PHP Fatal error:  Uncaught Symfony\Component\Routing\Exception\RouteNotFoundException: Route [profile-settings] not defined. in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:444
+Stack trace:
+#0 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(739): Illuminate\Routing\UrlGenerator->route('profile-setting...', 36, true)
+#1 /home/jellyhub/public_html/vignesh/cmatrimony/storage/framework/views/299c77568f14d46ba8d6b3db9be23334e30d7202.php(39): route('profile-setting...', 36)
+#2 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/jellyhub/...')
+#3 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#4 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/View/Engines/ in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php on line 444
+[12-Dec-2022 18:07:44 Asia/Dhaka] PHP Fatal error:  Uncaught Symfony\Component\Routing\Exception\RouteNotFoundException: Route [profile-settings] not defined. in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:444
+Stack trace:
+#0 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(739): Illuminate\Routing\UrlGenerator->route('profile-setting...', 36, true)
+#1 /home/jellyhub/public_html/vignesh/cmatrimony/storage/framework/views/299c77568f14d46ba8d6b3db9be23334e30d7202.php(39): route('profile-setting...', 36)
+#2 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/jellyhub/...')
+#3 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#4 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/View/Engines/ in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php on line 444
+[12-Dec-2022 18:26:16 Asia/Dhaka] PHP Fatal error:  Uncaught Symfony\Component\Routing\Exception\RouteNotFoundException: Route [profile-settings] not defined. in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:444
+Stack trace:
+#0 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(739): Illuminate\Routing\UrlGenerator->route('profile-setting...', 36, true)
+#1 /home/jellyhub/public_html/vignesh/cmatrimony/storage/framework/views/299c77568f14d46ba8d6b3db9be23334e30d7202.php(39): route('profile-setting...', 36)
+#2 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/jellyhub/...')
+#3 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#4 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/View/Engines/ in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php on line 444
+[12-Dec-2022 18:28:21 Asia/Dhaka] PHP Fatal error:  Uncaught ParseError: syntax error, unexpected '36' (T_LNUMBER) in /home/jellyhub/public_html/vignesh/cmatrimony/storage/framework/views/299c77568f14d46ba8d6b3db9be23334e30d7202.php:39
+Stack trace:
+#0 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#1 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('/home/jellyhub/...', Array)
+#2 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(61): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/jellyhub/...', Array)
+#3 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/facade/ignition/src/Views/Engines/CompilerEngine.php(37): Illuminate\View\Engines\CompilerEngine->get('/home/jellyhub/...', Array)
+#4 /home/jellyhub/public_html/vignesh/cmatrimony/vend in /home/jellyhub/public_html/vignesh/cmatrimony/resources/views/frontend/member/sidebar.blade.php on line 39
+[12-Dec-2022 18:28:28 Asia/Dhaka] PHP Fatal error:  Uncaught ParseError: syntax error, unexpected '36' (T_LNUMBER) in /home/jellyhub/public_html/vignesh/cmatrimony/storage/framework/views/299c77568f14d46ba8d6b3db9be23334e30d7202.php:39
+Stack trace:
+#0 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#1 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('/home/jellyhub/...', Array)
+#2 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(61): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/jellyhub/...', Array)
+#3 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/facade/ignition/src/Views/Engines/CompilerEngine.php(37): Illuminate\View\Engines\CompilerEngine->get('/home/jellyhub/...', Array)
+#4 /home/jellyhub/public_html/vignesh/cmatrimony/vend in /home/jellyhub/public_html/vignesh/cmatrimony/resources/views/frontend/member/sidebar.blade.php on line 39
+[12-Dec-2022 18:32:01 Asia/Dhaka] PHP Fatal error:  Uncaught ParseError: syntax error, unexpected ';', expecting ')' in /home/jellyhub/public_html/vignesh/cmatrimony/storage/framework/views/299c77568f14d46ba8d6b3db9be23334e30d7202.php:39
+Stack trace:
+#0 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#1 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('/home/jellyhub/...', Array)
+#2 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(61): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/jellyhub/...', Array)
+#3 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/facade/ignition/src/Views/Engines/CompilerEngine.php(37): Illuminate\View\Engines\CompilerEngine->get('/home/jellyhub/...', Array)
+#4 /home/jellyhub/public_html/vignesh/cmatrimony/ve in /home/jellyhub/public_html/vignesh/cmatrimony/resources/views/frontend/member/sidebar.blade.php on line 39
+[12-Dec-2022 18:32:35 Asia/Dhaka] PHP Fatal error:  Uncaught ParseError: syntax error, unexpected ';', expecting ')' in /home/jellyhub/public_html/vignesh/cmatrimony/storage/framework/views/299c77568f14d46ba8d6b3db9be23334e30d7202.php:39
+Stack trace:
+#0 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#1 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('/home/jellyhub/...', Array)
+#2 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(61): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/jellyhub/...', Array)
+#3 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/facade/ignition/src/Views/Engines/CompilerEngine.php(37): Illuminate\View\Engines\CompilerEngine->get('/home/jellyhub/...', Array)
+#4 /home/jellyhub/public_html/vignesh/cmatrimony/ve in /home/jellyhub/public_html/vignesh/cmatrimony/resources/views/frontend/member/sidebar.blade.php on line 39
+[12-Dec-2022 18:34:42 Asia/Dhaka] PHP Fatal error:  Uncaught ParseError: syntax error, unexpected ';', expecting ')' in /home/jellyhub/public_html/vignesh/cmatrimony/storage/framework/views/299c77568f14d46ba8d6b3db9be23334e30d7202.php:39
+Stack trace:
+#0 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#1 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('/home/jellyhub/...', Array)
+#2 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(61): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/jellyhub/...', Array)
+#3 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/facade/ignition/src/Views/Engines/CompilerEngine.php(37): Illuminate\View\Engines\CompilerEngine->get('/home/jellyhub/...', Array)
+#4 /home/jellyhub/public_html/vignesh/cmatrimony/ve in /home/jellyhub/public_html/vignesh/cmatrimony/resources/views/frontend/member/sidebar.blade.php on line 39
+[12-Dec-2022 18:39:00 Asia/Dhaka] PHP Fatal error:  Uncaught ParseError: syntax error, unexpected ';', expecting ')' in /home/jellyhub/public_html/vignesh/cmatrimony/storage/framework/views/299c77568f14d46ba8d6b3db9be23334e30d7202.php:39
+Stack trace:
+#0 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#1 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(58): Illuminate\Filesystem\Filesystem->getRequire('/home/jellyhub/...', Array)
+#2 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(61): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/jellyhub/...', Array)
+#3 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/facade/ignition/src/Views/Engines/CompilerEngine.php(37): Illuminate\View\Engines\CompilerEngine->get('/home/jellyhub/...', Array)
+#4 /home/jellyhub/public_html/vignesh/cmatrimony/ve in /home/jellyhub/public_html/vignesh/cmatrimony/resources/views/frontend/member/sidebar.blade.php on line 39
+[12-Dec-2022 18:39:31 Asia/Dhaka] PHP Fatal error:  Uncaught Symfony\Component\Routing\Exception\RouteNotFoundException: Route [profile-settings] not defined. in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php:444
+Stack trace:
+#0 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(739): Illuminate\Routing\UrlGenerator->route('profile-setting...', Array, true)
+#1 /home/jellyhub/public_html/vignesh/cmatrimony/storage/framework/views/299c77568f14d46ba8d6b3db9be23334e30d7202.php(39): route('profile-setting...')
+#2 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(107): require('/home/jellyhub/...')
+#3 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(108): Illuminate\Filesystem\Filesystem::Illuminate\Filesystem\{closure}()
+#4 /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/View/Engines/P in /home/jellyhub/public_html/vignesh/cmatrimony/vendor/laravel/framework/src/Illuminate/Routing/UrlGenerator.php on line 444

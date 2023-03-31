@@ -1,0 +1,3 @@
+alter table members add registered int(11) default 0;
+alter table members add registered_date datetime default NULL;
+alter table members add registered_amount int(11) default 0;
