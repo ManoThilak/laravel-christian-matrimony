@@ -29,7 +29,8 @@
 		<div class="absolute-bottom-left w-100 p-3 z-1">
 			<div class="absolute-full bg-white opacity-90 z--1"></div>
 			<div class="text-center">
-				<div class="text-primary fw-500 mb-1">{{ $member->first_name. $profile_picture_show  }}</div>
+				<div class="text-primary fw-500 mb-1">{{ $member->first_name }}</div>
+				{{-- <div class="text-primary fw-500 mb-1">{{ $member->first_name. $profile_picture_show  }}</div> --}}
             <div class="fs-10">
                 <span class="opacity-60">{{ translate('Member ID: ') }}</span>
                 <span class="ml-2 text-primary">{{ $member->code }}</span>

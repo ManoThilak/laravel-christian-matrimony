@@ -69,9 +69,10 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'first_name'  => ['required', 'string', 'max:255'],
-            'last_name'   => ['required', 'string', 'max:255'],
+            'first_name'  => ['required', 'string', 'max:255','regex:/^[a-zA-Z0-9\s\-\.\'\,\&]+$/'],
+            'last_name'   => ['required', 'string', 'max:255','regex:/^[a-zA-Z0-9\s\-\.\'\,\&]+$/'],
             'password'    => ['required', 'string', 'min:8', 'confirmed'],
+            'email'       => ['required', 'digits:10'],
         ]);
     }
 
@@ -166,6 +167,12 @@ class RegisterController extends Controller
         // if (filter_var($request->email, FILTER_VALIDATE_EMAIL)) {
             if(User::where('email', $request->email)->first() != null){
                 flash(translate('Phone already exists.'));
+                return back();
+            }
+            $string = $request->email;
+            $length = strlen($string);  
+            if($length > 10){
+                flash(translate('Phone Number cannot be greater than 10 Digits'));
                 return back();
             }
         // }

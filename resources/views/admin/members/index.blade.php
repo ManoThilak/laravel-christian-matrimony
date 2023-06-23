@@ -42,6 +42,7 @@
                             <th data-breakpoints="md">{{translate('Profile Reported')}}</th>
                             <th data-breakpoints="md">{{translate('Member Science')}}</th>
                             <th data-breakpoints="md">{{translate('Member Status')}}</th>
+                            @php $registered_header = 0;   @endphp
                             @foreach($members as $key => $member)
                             @php 
                                 $registered_header = $member->membership; 
