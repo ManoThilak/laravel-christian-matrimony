@@ -22,6 +22,8 @@ use App\Notifications\DbStoreNotification;
 use App\Utility\EmailUtility;
 use App\Utility\SmsUtility;
 use App\Models\SpiritualBackground;
+use App\Models\PhysicalAttribute;
+use App\Models\Address;
 
 class RegisterController extends Controller
 {
@@ -129,6 +131,8 @@ class RegisterController extends Controller
         $member->marital_status_id          = $data['marital_status'];
         $member->gender                     = $data['gender'];
         $member->on_behalves_id             = $data['on_behalf'];
+        $member->job                        = $data['job'];
+        $member->salary                     = $data['salary'];
         $member->birthday                   = date('Y-m-d', strtotime($data['date_of_birth']));
 
         $package                                = Package::where('id',1)->first();
@@ -156,6 +160,37 @@ class RegisterController extends Controller
 
 
         $spiritual_backgrounds->save();
+
+
+        // $physical_attribute = PhysicalAttribute::where('user_id', $id)->first();
+        //  if(empty($physical_attribute)){
+            $physical_attribute = new PhysicalAttribute;
+            $physical_attribute->user_id = $user->id;
+        //  }
+
+        $physical_attribute->complexion    = $data['complexion'];
+        $physical_attribute->disability    = $data['disability'];
+
+        $physical_attribute->save();
+
+
+
+        // $address = Address::where('user_id', $id)->where('type',$request->address_type)->first();
+        //  if(empty($address)){
+             $address = new Address;
+             $address->user_id = $user->id;
+        //  }
+        //  if($address_type == 'present'){
+            $address->country_id   = 101;
+            $address->state_id     = $data['permanent_state_id'];
+            $address->city_id      = $data['permanent_city_id'];
+           // $address->postal_code  = $request->permanent_postal_code;
+        //  }
+        $address->type             = 'present';
+        $address->save();
+
+
+
             
         if(addon_activation('otp_system') && $data['phone'] != null)
         {

@@ -141,6 +141,8 @@ Route::group(['middleware' => ['member','verified']], function(){
 
 });
 Route::post('/castess/get_caste_by_religions', 'CasteController@get_caste_by_religion')->name('castess.get_caste_by_religions');
+Route::post('/statess/get_state_by_countrys', 'StateController@get_state_by_country')->name('statess.get_state_by_countrys');
+    Route::post('/citiess/get_cities_by_states', 'CityController@get_cities_by_state')->name('citiess.get_cities_by_states');
 
 Route::group(['middleware' => ['auth']], function () {
     // member info edit
