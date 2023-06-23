@@ -140,6 +140,7 @@ Route::group(['middleware' => ['member','verified']], function(){
     Route::get('/member/notifications','NotificationController@frontend_notify_listing')->name('frontend.notifications');
 
 });
+Route::post('/castess/get_caste_by_religions', 'CasteController@get_caste_by_religion')->name('castess.get_caste_by_religions');
 
 Route::group(['middleware' => ['auth']], function () {
     // member info edit

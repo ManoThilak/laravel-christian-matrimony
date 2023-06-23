@@ -18,6 +18,8 @@ use App\Models\IgnoredUser;
 use App\Models\ProfileMatch;
 use Hash;
 use Artisan;
+use App\Models\Religion;
+use App\Models\MaritalStatus;
 
 class HomeController extends Controller
 {
@@ -68,9 +70,10 @@ class HomeController extends Controller
 
          $new_members = $new_members->orderBy('id','desc')->limit(get_setting('max_new_member_show_homepage'))->get()->shuffle();
          $premium_members = $premium_members->where('membership',2)->inRandomOrder()->limit(get_setting('max_premium_member_homepage'))->get();
+         $religions          = Religion::all();
+         $marital_statuses   = MaritalStatus::all();
 
-
-         return view('frontend.index', compact('premium_members','new_members'));
+         return view('frontend.index', compact('premium_members','new_members','religions','marital_statuses'));
      }
 
 

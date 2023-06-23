@@ -111,6 +111,29 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="member_religion_id">{{translate('Religion')}}</label>
+                                                <select class="form-control aiz-selectpicker" name="member_religion_id" id="member_religion_id" data-live-search="true" required>
+                                                    <option value="">{{translate('Select One')}}</option>
+                                                    @foreach ($religions as $religion)
+                                                        <option value="{{$religion->id}}"> {{ $religion->name }} </option>
+                                                    @endforeach
+                                                </select>
+                                                @error('member_religion_id')
+                                                    <small class="form-text text-danger">{{ $message }}</small>
+                                                @enderror
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="member_caste_id">{{translate('Caste')}}</label>
+                                                <select class="form-control aiz-selectpicker" name="member_caste_id" id="member_caste_id" data-live-search="true" required>
+                              
+                                                </select>
+                                                @error('member_caste_id')
+                                                    <small class="form-text text-danger">{{ $message }}</small>
+                                                @enderror
+                                            </div>
+                                        </div>    
                                         @if (addon_activation('otp_system'))
                                             <div>
                                                 <div class="d-flex justify-content-between align-items-start">
@@ -165,7 +188,7 @@
                                             </div>
                                         @endif
                                         <div class="row">
-                                        <div class="col-lg-6">
+                                            <div class="col-lg-6">
                                                 <div class="form-group mb-3">
                                                     <label class="form-label"
                                                         for="total">{{ translate('Reg Fees') }}</label>
@@ -175,6 +198,19 @@
                                                         value="300" readonly>
                                                     
                                                 </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="first_name" >{{translate('Marital Status')}}
+                                                    <span class="text-danger">*</span>
+                                                </label>
+                                                <select class="form-control aiz-selectpicker" name="marital_status" data-live-search="true" required>
+                                                    @foreach ($marital_statuses as $marital_status)
+                                                        <option value="{{$marital_status->id}}" >{{$marital_status->name}}</option>
+                                                    @endforeach
+                                                </select>
+                                                @error('marital_status')
+                                                    <small class="form-text text-danger">{{ $message }}</small>
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="row">
@@ -732,6 +768,14 @@
 @section('script')
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script type="text/javascript">
+
+        $(document).ready(function(){
+               
+                get_castes_by_religion_for_member();
+              
+            });
+
+
         function loginModal() {
             $('#LoginModal').modal();
         }
@@ -814,6 +858,34 @@
                 $(el).html('{{ translate('Use Email Instead') }}');
             }
         }
+        
+
+        
     </script>
+    <script>
+        $(document).ready(function(){
+            get_castes_by_religion_for_member();
+        });
+        $('#member_religion_id').on('change', function() {
+            get_castes_by_religion_for_member();
+        });
+        function get_castes_by_religion_for_member(){
+            var member_religion_id = $('#member_religion_id').val();
+            //alert(member_religion_id);
+                $.post('{{ route('castess.get_caste_by_religions') }}',{_token:'{{ csrf_token() }}', religion_id:member_religion_id}, function(data){
+                    $('#member_caste_id').html(null);
+                    for (var i = 0; i < data.length; i++) {
+                        $('#member_caste_id').append($('<option>', {
+                            value: data[i].id,
+                            text: data[i].name
+                        }));
+                    }
+                   
+                    AIZ.plugins.bootstrapSelect('refresh');
+
+                    
+                });
+        }
+    </script>        
   
 @endsection

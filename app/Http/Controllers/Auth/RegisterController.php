@@ -21,6 +21,7 @@ use Notification;
 use App\Notifications\DbStoreNotification;
 use App\Utility\EmailUtility;
 use App\Utility\SmsUtility;
+use App\Models\SpiritualBackground;
 
 class RegisterController extends Controller
 {
@@ -125,7 +126,7 @@ class RegisterController extends Controller
         $member                             = new Member;
         $member->user_id                    = $user->id;
         $member->save();
-
+        $member->marital_status_id          = $data['marital_status'];
         $member->gender                     = $data['gender'];
         $member->on_behalves_id             = $data['on_behalf'];
         $member->birthday                   = date('Y-m-d', strtotime($data['date_of_birth']));
@@ -142,6 +143,20 @@ class RegisterController extends Controller
         $member->registered             = 1;
         $member->save();
 
+
+        // $spiritual_backgrounds = SpiritualBackground::where('user_id', $id)->first();
+        //  if(empty($spiritual_backgrounds)){
+             $spiritual_backgrounds          = new SpiritualBackground;
+             $spiritual_backgrounds->user_id = $user->id;
+        //  }
+        
+         $spiritual_backgrounds->religion_id        = $data['member_religion_id'];
+         $spiritual_backgrounds->caste_id           = $data['member_caste_id'];
+         $spiritual_backgrounds->sub_caste_id       = 1;
+
+
+        $spiritual_backgrounds->save();
+            
         if(addon_activation('otp_system') && $data['phone'] != null)
         {
             $otpController = new OTPVerificationController;
