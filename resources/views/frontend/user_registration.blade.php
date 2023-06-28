@@ -94,6 +94,29 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="member_religion_id">{{translate('Religion')}}</label>
+                                                <select class="form-control aiz-selectpicker" name="member_religion_id" id="member_religion_id" data-live-search="true" required>
+                                                    <option value="">{{translate('Select One')}}</option>
+                                                    @foreach ($religions as $religion)
+                                                        <option value="{{$religion->id}}"> {{ $religion->name }} </option>
+                                                    @endforeach
+                                                </select>
+                                                @error('member_religion_id')
+                                                    <small class="form-text text-danger">{{ $message }}</small>
+                                                @enderror
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="member_caste_id">{{translate('Caste')}}</label>
+                                                <select class="form-control aiz-selectpicker" name="member_caste_id" id="member_caste_id" data-live-search="true" required>
+                              
+                                                </select>
+                                                @error('member_caste_id')
+                                                    <small class="form-text text-danger">{{ $message }}</small>
+                                                @enderror
+                                            </div>
+                                        </div>
                                         @if (addon_activation('otp_system'))
                                             <div>
                                                 <div class="d-flex justify-content-between align-items-start">
@@ -148,7 +171,7 @@
                                             </div>
                                         @endif
                                         <div class="row">
-                                        <div class="col-lg-6">
+                                            <div class="col-lg-6">
                                                 <div class="form-group mb-3">
                                                     <label class="form-label"
                                                         for="total">{{ translate('Reg Fees') }}</label>
@@ -157,6 +180,109 @@
                                                         name="total" id="total"
                                                         value="300" readonly>
                                                     
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="first_name" >{{translate('Marital Status')}}
+                                                    <span class="text-danger">*</span>
+                                                </label>
+                                                <select class="form-control aiz-selectpicker" name="marital_status" data-live-search="true" required>
+                                                    @foreach ($marital_statuses as $marital_status)
+                                                        <option value="{{$marital_status->id}}" >{{$marital_status->name}}</option>
+                                                    @endforeach
+                                                </select>
+                                                @error('marital_status')
+                                                    <small class="form-text text-danger">{{ $message }}</small>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="complexion">{{translate('Complexion')}}</label>
+                                                <select class="form-control aiz-selectpicker" name="complexion" >
+                                                  <option value="">{{translate('Select One')}}</option>
+                                                    <option value="extremely_fair_skin">{{translate('Extremely fair skin')}}</option>
+                                                    <option value="fair_skin">{{translate('Fair skin')}}</option>
+                                                    <option value="medium_skin">{{translate('Medium skin')}}</option>
+                                                    <option value="olive_skin">{{translate('Olive skin')}}</option>
+                                                    <option value="brown_skin">{{translate('Brown skin')}}</option>
+                                                    <option value="black_skin">{{translate('Black skin')}}</option>
+                            
+                                                    @error('complexion')
+                                                        <small class="form-text text-danger">{{ $message }}</small>
+                                                    @enderror
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="disability">{{translate('Disability')}}</label>
+                                                <span class="text-danger">*</span>
+                                                <select class="form-control aiz-selectpicker" name="disability" required>
+                                                  <option value="no">{{translate('No')}}</option>
+                                                    <option value="yes">{{translate('Yes')}}</option>
+                                                    
+                                                    @error('disability')
+                                                        <small class="form-text text-danger">{{ $message }}</small>
+                                                    @enderror
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6" style="display: none">
+                                                <label for="permanent_country_id">{{translate('Country')}}</label>
+                                                <select class="form-control aiz-selectpicker" name="permanent_country_id" id="permanent_country_id" data-live-search="true" required>
+                                                    <!-- <option value="">{{translate('Select One')}}</option> -->
+                                                    @foreach ($countries as $country)
+                                                        <option value="{{$country->id}}">{{$country->name}}</option>
+                                                    @endforeach
+                                                </select>
+                                                @error('permanent_country_id')
+                                                    <small class="form-text text-danger">{{ $message }}</small>
+                                                @enderror
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="permanent_state_id">{{translate('State')}}</label>
+                                                <select class="form-control aiz-selectpicker" name="permanent_state_id" id="permanent_state_id" data-live-search="true" required>
+                            
+                                                </select>
+                                                @error('permanent_state_id')
+                                                    <small class="form-text text-danger">{{ $message }}</small>
+                                                @enderror
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="permanent_city_id">{{translate('City')}}</label>
+                                                <select class="form-control aiz-selectpicker" name="permanent_city_id" id="permanent_city_id" data-live-search="true" required>
+                            
+                                                </select>
+                                                @error('permanent_city_id')
+                                                    <small class="form-text text-danger">{{ $message }}</small>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="form-group mb-3">
+                                                    <label class="form-label"
+                                                        for="job">{{ translate('Job') }}</label>
+                                                    <input type="text"
+                                                        class="form-control @error('job') is-invalid @enderror"
+                                                        name="job" id="job"
+                                                        placeholder="{{ translate('Job') }}" >
+                                                    @error('job')
+                                                        <span class="invalid-feedback" role="alert">{{ $message }}</span>
+                                                    @enderror
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="form-group mb-3">
+                                                    <label class="form-label"
+                                                        for="salary">{{ translate('Salary') }}</label>
+                                                    <input type="text"
+                                                        class="form-control @error('salary') is-invalid @enderror"
+                                                        name="salary" id="salary"
+                                                        placeholder="{{ translate('Salary(Per Month)') }}" >
+                                                    @error('salary')
+                                                        <span class="invalid-feedback" role="alert">{{ $message }}</span>
+                                                    @enderror
                                                 </div>
                                             </div>
                                         </div>
@@ -347,4 +473,70 @@
 	    }
 	}
 </script>
+<script>
+    $(document).ready(function(){
+        get_castes_by_religion_for_member();
+        get_states_by_country_for_permanent_address();
+        get_cities_by_state_for_permanent_address();
+    });
+    $('#member_religion_id').on('change', function() {
+        get_castes_by_religion_for_member();
+    });
+    $('#permanent_country_id').on('change', function() {
+        get_states_by_country_for_permanent_address();
+    });
+
+    $('#permanent_state_id').on('change', function() {
+        get_cities_by_state_for_permanent_address();
+    });
+    function get_castes_by_religion_for_member(){
+        var member_religion_id = $('#member_religion_id').val();
+        //alert(member_religion_id);
+            $.post('{{ route('castess.get_caste_by_religions') }}',{_token:'{{ csrf_token() }}', religion_id:member_religion_id}, function(data){
+                $('#member_caste_id').html(null);
+                for (var i = 0; i < data.length; i++) {
+                    $('#member_caste_id').append($('<option>', {
+                        value: data[i].id,
+                        text: data[i].name
+                    }));
+                }
+               
+                AIZ.plugins.bootstrapSelect('refresh');
+
+                
+            });
+    }
+    function get_states_by_country_for_permanent_address(){
+    var permanent_country_id = $('#permanent_country_id').val();
+        $.post('{{ route('statess.get_state_by_countrys') }}',{_token:'{{ csrf_token() }}', country_id:permanent_country_id}, function(data){
+            $('#permanent_state_id').html(null);
+            for (var i = 0; i < data.length; i++) {
+                $('#permanent_state_id').append($('<option>', {
+                    value: data[i].id,
+                    text: data[i].name
+                }));
+            }
+
+
+            AIZ.plugins.bootstrapSelect('refresh');
+
+            get_cities_by_state_for_permanent_address();
+        });
+}
+function get_cities_by_state_for_permanent_address(){
+    var permanent_state_id = $('#permanent_state_id').val();
+        $.post('{{ route('citiess.get_cities_by_states') }}',{_token:'{{ csrf_token() }}', state_id:permanent_state_id}, function(data){
+            $('#permanent_city_id').html(null);
+            for (var i = 0; i < data.length; i++) {
+                $('#permanent_city_id').append($('<option>', {
+                    value: data[i].id,
+                    text: data[i].name
+                }));
+            }
+         
+
+            AIZ.plugins.bootstrapSelect('refresh');
+        });
+}
+</script>   
 @endsection

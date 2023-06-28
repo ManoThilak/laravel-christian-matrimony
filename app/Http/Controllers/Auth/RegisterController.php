@@ -24,6 +24,11 @@ use App\Utility\SmsUtility;
 use App\Models\SpiritualBackground;
 use App\Models\PhysicalAttribute;
 use App\Models\Address;
+use App\Models\Religion;
+use App\Models\MaritalStatus;
+use App\Models\Country;
+use App\Models\State;
+use App\Models\City;
 
 class RegisterController extends Controller
 {
@@ -66,7 +71,14 @@ class RegisterController extends Controller
 
     public function showRegistrationForm()
     {
-        return view('frontend.user_registration');
+        $religions          = Religion::all();
+        $marital_statuses   = MaritalStatus::all();
+        $countries          = Country::where('status',1)->where('id',101)->get();
+        $states             = State::all();
+        $cities             = City::all();
+
+      
+        return view('frontend.user_registration', compact('religions','marital_statuses','countries','states','cities'));
     }
 
     protected function validator(array $data)
