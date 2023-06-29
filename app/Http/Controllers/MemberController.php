@@ -23,6 +23,9 @@ use Redirect;
 use Auth;
 use App\Utility\EmailUtility;
 use App\Utility\SmsUtility;
+use App\Models\SpiritualBackground;
+use App\Models\PhysicalAttribute;
+use App\Models\Address;
 
 
 
@@ -100,7 +103,14 @@ class MemberController extends Controller
      */
     public function create()
     {
-        return view('admin.members.create');
+        $religions          = Religion::all();
+        $marital_statuses   = MaritalStatus::all();
+        $countries          = Country::where('id',101)->get();
+        $states             = State::all();
+        $cities             = City::all();
+
+        return view('admin.members.create', compact('religions','marital_statuses','countries','states','cities'));
+        // return view('admin.members.create');
     }
 
     /**
@@ -162,6 +172,9 @@ class MemberController extends Controller
             $member->user_id                    = $user->id;
             $member->gender                     = $request->gender;
             $member->on_behalves_id             = $request->on_behalf;
+            $member->marital_status_id          = $request->marital_status;
+            $member->job                        = $request->job;
+            $member->salary                     = $request->salary;
             $member->birthday                   = date('Y-m-d', strtotime($request->date_of_birth));
 
             $package                                = Package::where('id',$request->package)->first();
@@ -185,6 +198,52 @@ class MemberController extends Controller
             $user_update                = User::findOrFail($user->id);
             $user_update->membership    = $membership;
             $user_update->save();
+
+
+
+            // $spiritual_backgrounds = SpiritualBackground::where('user_id', $id)->first();
+        //  if(empty($spiritual_backgrounds)){
+             $spiritual_backgrounds          = new SpiritualBackground;
+             $spiritual_backgrounds->user_id = $user->id;
+        //  }
+        
+        $spiritual_backgrounds->religion_id        = $request->member_religion_id;
+        $spiritual_backgrounds->caste_id           = $request->member_caste_id;
+        $spiritual_backgrounds->sub_caste_id       = 1;
+        $spiritual_backgrounds->save();
+
+
+
+        // $physical_attribute = PhysicalAttribute::where('user_id', $id)->first();
+        //  if(empty($physical_attribute)){
+            $physical_attribute = new PhysicalAttribute;
+            $physical_attribute->user_id = $user->id;
+        //  }
+
+        $physical_attribute->complexion    = $request->complexion;
+        $physical_attribute->disability    = $request->disability;
+
+        $physical_attribute->save();
+
+
+
+        // $address = Address::where('user_id', $id)->where('type',$request->address_type)->first();
+        //  if(empty($address)){
+             $address = new Address;
+             $address->user_id = $user->id;
+        //  }
+        //  if($address_type == 'present'){
+            $address->country_id   = 101;
+            $address->state_id     = $request->permanent_state_id;
+            $address->city_id      = $request->permanent_city_id;
+           // $address->postal_code  = $request->permanent_postal_code;
+        //  }
+        $address->type             = 'present';
+        $address->save();
+
+
+
+
 
             // Account opening email to member
             if($user->email != null  && env('MAIL_USERNAME') != null && (get_email_template('account_oppening_email','status') == 1))

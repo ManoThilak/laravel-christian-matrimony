@@ -112,6 +112,158 @@
                                 @enderror
                             </div>
                         </div>
+
+
+                        <div class="form-group row">
+                            <label class="col-md-2 col-form-label" for="member_religion_id">{{translate('Religion')}}<span class="text-danger"> *</span></label>
+                            <div class="col-md-9">
+                                <select class="form-control aiz-selectpicker" name="member_religion_id" id="member_religion_id" data-live-search="true" required>
+                                <option value="">{{translate('Select One')}}</option>
+                                    @foreach ($religions as $religion)
+                                    <option value="{{$religion->id}}"> {{ $religion->name }} </option>
+                                    @endforeach
+                                </select>
+                                @error('member_religion_id')
+                                    <small class="form-text text-danger">{{ $message }}</small>
+                                @enderror
+                            </div>
+                        </div>
+
+
+                       
+                        <div class="form-group row">
+                            <label class="col-md-2 col-form-label" for="member_caste_id">{{translate('Caste')}}<span class="text-danger"> *</span></label>
+                            <div class="col-md-9">
+                                <select class="form-control aiz-selectpicker" name="member_caste_id" id="member_caste_id" data-live-search="true" required>
+                                
+                                </select>
+                                @error('member_caste_id')
+                                    <small class="form-text text-danger">{{ $message }}</small>
+                                @enderror
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row">
+                            <label class="col-md-2 col-form-label" for="marital_status_id">Marital Status<span class="text-danger"> *</span></label>
+                            <div class="col-md-9">
+                                <select class="form-control aiz-selectpicker" name="marital_status" id="marital_status" data-live-search="true" required>
+                                <option value="">{{translate('Select One')}}</option>
+                                    @foreach ($marital_statuses as $marital_status)
+                                    <option value="{{$marital_status->id}}" >{{$marital_status->name}}</option>
+                                    @endforeach
+                                </select>
+                                @error('marital_status')
+                                    <small class="form-text text-danger">{{ $message }}</small>
+                                @enderror
+                            </div>
+                        </div>
+
+                       
+
+                        <div class="form-group row">
+                            <label class="col-md-2 col-form-label" for="complexion">{{translate('Complexion')}}<span class="text-danger"> *</span></label>
+                            <div class="col-md-9">
+                                <select class="form-control aiz-selectpicker" name="complexion" id="complexion" data-live-search="true" required>
+                                <option value="">{{translate('Select One')}}</option>
+                                <option value="extremely_fair_skin">{{translate('Extremely fair skin')}}</option>
+                                <option value="fair_skin">{{translate('Fair skin')}}</option>
+                                <option value="medium_skin">{{translate('Medium skin')}}</option>
+                                <option value="olive_skin">{{translate('Olive skin')}}</option>
+                                <option value="brown_skin">{{translate('Brown skin')}}</option>
+                                <option value="black_skin">{{translate('Black skin')}}</option>
+                                </select>
+                                @error('complexion')
+                                    <small class="form-text text-danger">{{ $message }}</small>
+                                @enderror
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="form-group row">
+                            <label class="col-md-2 col-form-label" for="disability">{{translate('Disability')}}<span class="text-danger"> *</span></label>
+                            <div class="col-md-9">
+                                <select class="form-control aiz-selectpicker" name="disability" id="disability" data-live-search="true" required>
+                                <option value="no">{{translate('No')}}</option>
+                                <option value="yes">{{translate('Yes')}}</option>
+                                </select>
+                                @error('disability')
+                                    <small class="form-text text-danger">{{ $message }}</small>
+                                @enderror
+                            </div>
+                        </div>
+
+
+                        
+                        <div class="form-group row" style="display:none;">
+                            <label class="col-md-2 col-form-label" for="permanent_country_id">{{translate('Country')}}<span class="text-danger"> *</span></label>
+                            <div class="col-md-9">
+                                <select class="form-control aiz-selectpicker" name="permanent_country_id" id="permanent_country_id" data-live-search="true" required>
+                                <!-- <option value="">{{translate('Select One')}}</option> -->
+                                    @foreach ($countries as $country)
+                                    <option value="{{$country->id}}">{{$country->name}}</option>
+                                    @endforeach
+                            </select>
+                            @error('permanent_country_id')
+                                <small class="form-text text-danger">{{ $message }}</small>
+                            @enderror
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row">
+                            <label class="col-md-2 col-form-label" for="permanent_state_id">{{translate('State')}}<span class="text-danger"> *</span></label>
+                            <div class="col-md-9">
+                                <select class="form-control aiz-selectpicker" name="permanent_state_id" id="permanent_state_id" data-live-search="true" required>
+                                
+                                </select>
+                                @error('permanent_state_id')
+                                    <small class="form-text text-danger">{{ $message }}</small>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-2 col-form-label" for="permanent_city_id">{{translate('City')}}<span class="text-danger"> *</span></label>
+                            <div class="col-md-9">
+                                <select class="form-control aiz-selectpicker" name="permanent_city_id" id="permanent_city_id" data-live-search="true" required>
+                                
+                                </select>
+                                @error('permanent_city_id')
+                                    <small class="form-text text-danger">{{ $message }}</small>
+                                @enderror
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group row">
+                            <label class="col-md-2 col-form-label">{{translate('Job')}}<span class="text-danger"> *</span></label>
+                            <div class="col-md-9">
+                                <input type="text" name="job" class="form-control" placeholder="{{translate('Job')}}" required>
+                                @error('job')
+                                    <small class="form-text text-danger">{{ $message }}</small>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-2 col-form-label">{{translate('Salary')}}<span class="text-danger"> *</span></label>
+                            <div class="col-md-9">
+                                <input type="text" name="salary" class="form-control" placeholder="{{translate('Salary(Per Month)')}}" required>
+                                @error('salary')
+                                    <small class="form-text text-danger">{{ $message }}</small>
+                                @enderror
+                            </div>
+                        </div>
+
+
+                        
+
+
+
+
+
                         <div class="form-group row">
                             <label class="col-md-2 col-form-label" for="signinSrEmail">{{translate('photo')}} <small>(800x800)</small></label>
                             <div class="col-md-9">
@@ -217,5 +369,70 @@
     });
 
 </script>
+<script>
+    $(document).ready(function(){
+        get_castes_by_religion_for_member();
+        get_states_by_country_for_permanent_address();
+        get_cities_by_state_for_permanent_address();
+    });
+    $('#member_religion_id').on('change', function() {
+        get_castes_by_religion_for_member();
+    });
+    $('#permanent_country_id').on('change', function() {
+        get_states_by_country_for_permanent_address();
+    });
 
+    $('#permanent_state_id').on('change', function() {
+        get_cities_by_state_for_permanent_address();
+    });
+    function get_castes_by_religion_for_member(){
+        var member_religion_id = $('#member_religion_id').val();
+        //alert("member_religion_id");
+            $.post('{{ route('castes.get_caste_by_religion') }}',{_token:'{{ csrf_token() }}', religion_id:member_religion_id}, function(data){
+                $('#member_caste_id').html(null);
+                for (var i = 0; i < data.length; i++) {
+                    $('#member_caste_id').append($('<option>', {
+                        value: data[i].id,
+                        text: data[i].name
+                    }));
+                }
+               
+                AIZ.plugins.bootstrapSelect('refresh');
+
+                
+            });
+    }
+    function get_states_by_country_for_permanent_address(){
+    var permanent_country_id = $('#permanent_country_id').val();
+        $.post('{{ route('statess.get_state_by_countrys') }}',{_token:'{{ csrf_token() }}', country_id:permanent_country_id}, function(data){
+            $('#permanent_state_id').html(null);
+            for (var i = 0; i < data.length; i++) {
+                $('#permanent_state_id').append($('<option>', {
+                    value: data[i].id,
+                    text: data[i].name
+                }));
+            }
+
+
+            AIZ.plugins.bootstrapSelect('refresh');
+
+            get_cities_by_state_for_permanent_address();
+        });
+}
+function get_cities_by_state_for_permanent_address(){
+    var permanent_state_id = $('#permanent_state_id').val();
+        $.post('{{ route('citiess.get_cities_by_states') }}',{_token:'{{ csrf_token() }}', state_id:permanent_state_id}, function(data){
+            $('#permanent_city_id').html(null);
+            for (var i = 0; i < data.length; i++) {
+                $('#permanent_city_id').append($('<option>', {
+                    value: data[i].id,
+                    text: data[i].name
+                }));
+            }
+         
+
+            AIZ.plugins.bootstrapSelect('refresh');
+        });
+}
+</script>  
 @endsection
