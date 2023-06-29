@@ -62,10 +62,16 @@
                                                     </td>
                                                     <td class="py-1 w-25 fw-400">
                                                         {{ \Carbon\Carbon::parse($user->member->birthday)->age }}</td>
-                                                    <td class="py-1 w-25"><span>{{ translate('Height') }}</span></td>
+                                                    {{-- <td class="py-1 w-25"><span>{{ translate('Height') }}</span></td>
                                                     <td class="py-1 w-25 fw-400">
                                                         @if (!empty($user->physical_attributes->height))
                                                             {{ $user->physical_attributes->height }}
+                                                        @endif
+                                                    </td> --}}
+                                                    <td class="py-1"><span>{{ translate('Marital Status') }}</span></td>
+                                                    <td class="py-1 fw-400">
+                                                        @if ($user->member->marital_status_id != null)
+                                                            {{ $user->member->marital_status->name }}
                                                         @endif
                                                     </td>
                                                 </tr>
@@ -90,14 +96,12 @@
                                                             {{ \App\Models\MemberLanguage::where('id', $user->member->mothere_tongue)->first()->name }}
                                                         @endif
                                                     </td>
-                                                    <td class="py-1"><span>{{ translate('Marital Status') }}</span></td>
+                                                    {{-- <td class="py-1"><span>{{ translate('Marital Status') }}</span></td>
                                                     <td class="py-1 fw-400">
                                                         @if ($user->member->marital_status_id != null)
                                                             {{ $user->member->marital_status->name }}
                                                         @endif
-                                                    </td>
-                                                </tr>
-                                                <tr>
+                                                    </td> --}}
                                                     <td class="py-1"><span>{{ translate('Location') }}</span></td>
                                                     <td class="py-1 fw-400">
                                                         @php
@@ -107,6 +111,31 @@
                                                         @endphp
                                                         @if (!empty($present_address->country_id))
                                                             {{ $present_address->country->name }}
+                                                        @endif
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    {{-- <td class="py-1"><span>{{ translate('Location') }}</span></td>
+                                                    <td class="py-1 fw-400">
+                                                        @php
+                                                            $present_address = \App\Models\Address::where('type', 'present')
+                                                                ->where('user_id', $user->id)
+                                                                ->first();
+                                                        @endphp
+                                                        @if (!empty($present_address->country_id))
+                                                            {{ $present_address->country->name }}
+                                                        @endif
+                                                    </td> --}}
+                                                    <td class="py-1"><span>{{ translate('Job') }}</span></td>
+                                                    <td class="py-1 fw-400">
+                                                        @if ($user->member->job != null)
+                                                            {{ $user->member->job }}
+                                                        @endif
+                                                    </td>
+                                                    <td class="py-1"><span>{{ translate('Salary') }}</span></td>
+                                                    <td class="py-1 fw-400">
+                                                        @if ($user->member->salary != null)
+                                                            {{ $user->member->salary }}
                                                         @endif
                                                     </td>
                                                 </tr>

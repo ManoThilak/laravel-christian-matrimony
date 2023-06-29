@@ -98,6 +98,27 @@
             </div>
 
             <div class="form-group row">
+                <div class="col-md-6">
+                    <label for="job" >{{translate('Job')}}
+                        <span class="text-danger">*</span>
+                    </label>
+                    <input type="text" name="job" value="{{ $member->member->job }}" class="form-control" placeholder="{{translate('Job')}}" required>
+                    @error('job')
+                        <small class="form-text text-danger">{{ $message }}</small>
+                    @enderror
+                </div>
+                <div class="col-md-6">
+                    <label for="salary" >{{translate('Salary')}}
+                        <span class="text-danger">*</span>
+                    </label>
+                    <input type="text" name="salary" value="{{ $member->member->salary }}" class="form-control" placeholder="{{translate('Salary(Per Month)')}}" required>
+                    @error('salary')
+                        <small class="form-text text-danger">{{ $message }}</small>
+                    @enderror
+                </div>
+            </div>
+
+            <div class="form-group row">
                 <div class="col-md-12">
                     <label for="photo" >{{translate('Photo')}} <small>(800x800)</small>
                         @if(auth()->user()->photo != null && auth()->user()->photo_approved == 0)

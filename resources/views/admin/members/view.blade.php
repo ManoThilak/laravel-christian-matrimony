@@ -96,6 +96,14 @@
                     <th>{{translate('On Behalf')}}</th>
                     <td>{{ !empty($member->member->on_behalves_id) ? $member->member->on_behalves->name : ''}}</td>
                 </tr>
+                <tr>
+                    <th>{{translate('Job')}}</th>
+                    <td>{{ !empty($member->member->job) ? $member->member->job : ''}}</td>
+                    <th>{{translate('Salary')}}</th>
+                    <td>{{ !empty($member->member->salary) ? $member->member->salary : ''}}</td>
+                    
+
+                </tr>
                 </table>
             </div>
         </div>

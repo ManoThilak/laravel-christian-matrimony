@@ -377,6 +377,8 @@ class MemberController extends Controller
         $member->birthday           = date('Y-m-d', strtotime($request->date_of_birth));
         $member->marital_status_id  = $request->marital_status;
         $member->children           = $request->children;
+        $member->job                        = $request->job;
+        $member->salary                     = $request->salary;
 
         if($member->save())
         {

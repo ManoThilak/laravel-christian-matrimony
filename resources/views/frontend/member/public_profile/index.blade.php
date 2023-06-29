@@ -530,12 +530,12 @@
                                                             <td class="py-1 fw-600">{{ translate('Last Name') }}</td>
                                                             <td class="py-1">{{ $user->last_name }}</td>
                                                         </tr>
-                                                        <tr>
+                                                        {{-- <tr>
                                                             <td class="py-1 fw-600">{{ translate('Height') }}</td>
                                                             <td class="py-1">
                                                                 {{ !empty($user->physical_attributes->height) ? $user->physical_attributes->height : '' }}
                                                             </td>
-                                                        </tr>
+                                                        </tr> --}}
                                                         <tr>
                                                             <td class="py-1 fw-600">{{ translate('Date of Birth') }}
                                                             </td>
@@ -555,6 +555,18 @@
                                                             </td>
                                                             <td class="py-1">
                                                                 {{ !empty($user->member->marital_status->name) ? $user->member->marital_status->name : '' }}
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="py-1 fw-600">{{ translate('Job') }}</td>
+                                                            <td class="py-1">
+                                                                {{ !empty($user->member->job) ? $user->member->job : '' }}
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="py-1 fw-600">{{ translate('Salary') }}</td>
+                                                            <td class="py-1">
+                                                                {{ !empty($user->member->salary) ? $user->member->salary : '' }}
                                                             </td>
                                                         </tr>
                                                     </tbody>
