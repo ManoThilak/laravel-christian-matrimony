@@ -114,7 +114,7 @@
                         </div>
 
 
-                        <div class="form-group row">
+                        {{-- <div class="form-group row">
                             <label class="col-md-2 col-form-label" for="member_religion_id">{{translate('Religion')}}<span class="text-danger"> *</span></label>
                             <div class="col-md-9">
                                 <select class="form-control aiz-selectpicker" name="member_religion_id" id="member_religion_id" data-live-search="true" required>
@@ -127,17 +127,36 @@
                                     <small class="form-text text-danger">{{ $message }}</small>
                                 @enderror
                             </div>
-                        </div>
+                        </div> --}}
 
 
                        
-                        <div class="form-group row">
+                        {{-- <div class="form-group row">
                             <label class="col-md-2 col-form-label" for="member_caste_id">{{translate('Caste')}}<span class="text-danger"> *</span></label>
                             <div class="col-md-9">
                                 <select class="form-control aiz-selectpicker" name="member_caste_id" id="member_caste_id" data-live-search="true" required>
                                 
                                 </select>
                                 @error('member_caste_id')
+                                    <small class="form-text text-danger">{{ $message }}</small>
+                                @enderror
+                            </div>
+                        </div> --}}
+
+                        <div class="form-group row">
+                            <label class="col-md-2 col-form-label">{{translate('Religion')}}<span class="text-danger"> *</span></label>
+                            <div class="col-md-9">
+                                <input type="text" name="religion" class="form-control" placeholder="{{translate('Religion')}}" required>
+                                @error('religion')
+                                    <small class="form-text text-danger">{{ $message }}</small>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-2 col-form-label">{{translate('Caste')}}<span class="text-danger"> *</span></label>
+                            <div class="col-md-9">
+                                <input type="text" name="caste" class="form-control" placeholder="{{translate('Caste')}}" required>
+                                @error('caste')
                                     <small class="form-text text-danger">{{ $message }}</small>
                                 @enderror
                             </div>

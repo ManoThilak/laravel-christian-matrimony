@@ -95,6 +95,34 @@
                                             </div>
                                         </div>
                                         <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="form-group mb-3">
+                                                    <label class="form-label"
+                                                        for="Religion">{{ translate('Religion') }}</label>
+                                                    <input type="text"
+                                                        class="form-control @error('religion') is-invalid @enderror"
+                                                        name="religion" id="religion"
+                                                        placeholder="{{ translate('Religion') }}" >
+                                                    @error('religion')
+                                                        <span class="invalid-feedback" role="alert">{{ $message }}</span>
+                                                    @enderror
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="form-group mb-3">
+                                                    <label class="form-label"
+                                                        for="caste">{{ translate('Caste') }}</label>
+                                                    <input type="text"
+                                                        class="form-control @error('caste') is-invalid @enderror"
+                                                        name="caste" id="caste"
+                                                        placeholder="{{ translate('Caste') }}" >
+                                                    @error('caste')
+                                                        <span class="invalid-feedback" role="alert">{{ $message }}</span>
+                                                    @enderror
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {{-- <div class="row">
                                             <div class="col-md-6">
                                                 <label for="member_religion_id">{{translate('Religion')}}</label>
                                                 <select class="form-control aiz-selectpicker" name="member_religion_id" id="member_religion_id" data-live-search="true" required>
@@ -116,7 +144,7 @@
                                                     <small class="form-text text-danger">{{ $message }}</small>
                                                 @enderror
                                             </div>
-                                        </div>
+                                        </div> --}}
                                         @if (addon_activation('otp_system'))
                                             <div>
                                                 <div class="d-flex justify-content-between align-items-start">

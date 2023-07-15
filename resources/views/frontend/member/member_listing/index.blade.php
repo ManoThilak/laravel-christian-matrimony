@@ -78,14 +78,20 @@
                                                 <tr>
                                                     <td class="py-1"><span>{{ translate('Religion') }}</span></td>
                                                     <td class="py-1 fw-400">
-                                                        @if (!empty($user->spiritual_backgrounds->religion_id))
+                                                        {{-- @if (!empty($user->spiritual_backgrounds->religion_id))
                                                             {{ $user->spiritual_backgrounds->religion->name }}
+                                                        @endif --}}
+                                                        @if ($user->member->religion != null)
+                                                            {{ $user->member->religion }}
                                                         @endif
                                                     </td>
                                                     <td class="py-1"><span>{{ translate('Caste') }}</span></td>
                                                     <td class="py-1 fw-400">
-                                                        @if (!empty($user->spiritual_backgrounds->caste_id))
+                                                        {{-- @if (!empty($user->spiritual_backgrounds->caste_id))
                                                             {{ $user->spiritual_backgrounds->caste->name }}
+                                                        @endif --}}
+                                                        @if ($user->member->caste != null)
+                                                            {{ $user->member->caste }}
                                                         @endif
                                                     </td>
                                                 </tr>
@@ -109,8 +115,8 @@
                                                                 ->where('user_id', $user->id)
                                                                 ->first();
                                                         @endphp
-                                                        @if (!empty($present_address->country_id))
-                                                            {{ $present_address->country->name }}
+                                                        @if (!empty($present_address->state_id))
+                                                            {{ $present_address->state->name }}
                                                         @endif
                                                     </td>
                                                 </tr>

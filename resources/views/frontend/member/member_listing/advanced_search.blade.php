@@ -46,7 +46,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    {{-- <div class="row">
                         <div class="col-lg-12">
                             <div class="form-group mb-3">
                                 <label class="form-label" for="name">{{ translate('Religion') }}</label>
@@ -79,7 +79,7 @@
                                 </select>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="form-group mb-3">

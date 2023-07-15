@@ -498,10 +498,16 @@
                                                                 {{ !empty($user->member->birthday) ? \Carbon\Carbon::parse($user->member->birthday)->age : '' }}
                                                             </td>
                                                         </tr>
-                                                        <tr>
+                                                        {{-- <tr>
                                                             <th class="py-1 fw-600">{{ translate('Religion') }}</th>
                                                             <td class="py-1">
                                                                 {{ !empty($user->spiritual_backgrounds->religion->name) ? $user->spiritual_backgrounds->religion->name : '' }}
+                                                            </td>
+                                                        </tr> --}}
+                                                        <tr>
+                                                            <td class="py-1 fw-600">{{ translate('Religion') }}</td>
+                                                            <td class="py-1">
+                                                                {{ !empty($user->member->religion) ? $user->member->religion : '' }}
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -543,10 +549,16 @@
                                                                 {{ !empty($user->member->birthday) ? date('d/m/Y', strtotime($user->member->birthday)) : '' }}
                                                             </td>
                                                         </tr>
-                                                        <tr>
+                                                        {{-- <tr>
                                                             <th class="py-1 fw-600">{{ translate('Caste') }}</th>
                                                             <td class="py-1">
                                                                 {{ !empty($user->spiritual_backgrounds->caste->name) ? $user->spiritual_backgrounds->caste->name : '' }}
+                                                            </td>
+                                                        </tr> --}}
+                                                        <tr>
+                                                            <td class="py-1 fw-600">{{ translate('Caste') }}</td>
+                                                            <td class="py-1">
+                                                                {{ !empty($user->member->caste) ? $user->member->caste : '' }}
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -569,6 +581,8 @@
                                                                 {{ !empty($user->member->salary) ? $user->member->salary : '' }}
                                                             </td>
                                                         </tr>
+                                                        
+                                                        
                                                     </tbody>
                                                 </table>
                                             </div>

@@ -73,7 +73,7 @@ class RegisterController extends Controller
     {
         $religions          = Religion::all();
         $marital_statuses   = MaritalStatus::all();
-        $countries          = Country::where('status',1)->where('id',101)->get();
+        $countries          = Country::where('id',101)->get();
         $states             = State::all();
         $cities             = City::all();
 
@@ -145,6 +145,8 @@ class RegisterController extends Controller
         $member->on_behalves_id             = $data['on_behalf'];
         $member->job                        = $data['job'];
         $member->salary                     = $data['salary'];
+        $member->religion                        = $data['religion'];
+        $member->caste                     = $data['caste'];
         $member->birthday                   = date('Y-m-d', strtotime($data['date_of_birth']));
 
         $package                                = Package::where('id',1)->first();
@@ -160,18 +162,18 @@ class RegisterController extends Controller
         $member->save();
 
 
-        // $spiritual_backgrounds = SpiritualBackground::where('user_id', $id)->first();
-        //  if(empty($spiritual_backgrounds)){
-             $spiritual_backgrounds          = new SpiritualBackground;
-             $spiritual_backgrounds->user_id = $user->id;
-        //  }
+        // // $spiritual_backgrounds = SpiritualBackground::where('user_id', $id)->first();
+        // //  if(empty($spiritual_backgrounds)){
+        //      $spiritual_backgrounds          = new SpiritualBackground;
+        //      $spiritual_backgrounds->user_id = $user->id;
+        // //  }
         
-         $spiritual_backgrounds->religion_id        = $data['member_religion_id'];
-         $spiritual_backgrounds->caste_id           = $data['member_caste_id'];
-         $spiritual_backgrounds->sub_caste_id       = 1;
+        //  $spiritual_backgrounds->religion_id        = $data['member_religion_id'];
+        //  $spiritual_backgrounds->caste_id           = $data['member_caste_id'];
+        //  $spiritual_backgrounds->sub_caste_id       = 1;
 
 
-        $spiritual_backgrounds->save();
+        // $spiritual_backgrounds->save();
 
 
         // $physical_attribute = PhysicalAttribute::where('user_id', $id)->first();

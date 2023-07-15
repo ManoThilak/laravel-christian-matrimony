@@ -119,6 +119,34 @@
                 </div>
             </div>
         </div>
+        <div class="form-group row">
+            <div class="col-md-6">
+                <label for="job" >{{translate('Job')}}
+                    <span class="text-danger">*</span>
+                </label>
+                <input type="text" name="job" value="{{ $member->member->job }}" class="form-control" placeholder="{{translate('Job')}}" >
+            </div>
+            <div class="col-md-6">
+                <label for="salary" >{{translate('Salary')}}
+                    <span class="text-danger">*</span>
+                </label>
+                <input type="text" name="salary" value="{{ $member->member->salary }}" class="form-control" placeholder="{{translate('Salary')}}" >
+            </div>
+        </div> 
+        <div class="form-group row">
+            <div class="col-md-6">
+                <label for="religion" >{{translate('Religion')}}
+                    <span class="text-danger">*</span>
+                </label>
+                <input type="text" name="religion" value="{{ $member->member->religion }}" class="form-control" placeholder="{{translate('Religion')}}" >
+            </div>
+            <div class="col-md-6">
+                <label for="caste" >{{translate('Caste')}}
+                    <span class="text-danger">*</span>
+                </label>
+                <input type="text" name="caste" value="{{ $member->member->caste }}" class="form-control" placeholder="{{translate('Caste')}}" >
+            </div>
+        </div>
         <div class="text-right">
             <button type="submit" class="btn btn-primary btn-sm">{{translate('Update')}}</button>
         </div>

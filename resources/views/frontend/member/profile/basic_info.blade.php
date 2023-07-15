@@ -117,6 +117,26 @@
                     @enderror
                 </div>
             </div>
+            <div class="form-group row">
+                <div class="col-md-6">
+                    <label for="religion" >{{translate('Religion')}}
+                        <span class="text-danger">*</span>
+                    </label>
+                    <input type="text" name="religion" value="{{ $member->member->religion }}" class="form-control" placeholder="{{translate('Religion')}}" required>
+                    @error('religion')
+                        <small class="form-text text-danger">{{ $message }}</small>
+                    @enderror
+                </div>
+                <div class="col-md-6">
+                    <label for="caste" >{{translate('Caste')}}
+                        <span class="text-danger">*</span>
+                    </label>
+                    <input type="text" name="caste" value="{{ $member->member->caste }}" class="form-control" placeholder="{{translate('Caste')}}" required>
+                    @error('caste')
+                        <small class="form-text text-danger">{{ $message }}</small>
+                    @enderror
+                </div>
+            </div>
 
             <div class="form-group row">
                 <div class="col-md-12">

@@ -1,3 +1,6 @@
 alter table members add registered int(11) default 0;
 alter table members add registered_date datetime default NULL;
 alter table members add registered_amount int(11) default 0;
+
+alter table members add religion longtext COLLATE utf8_unicode_ci DEFAULT NULL;
+alter table members add caste longtext COLLATE utf8_unicode_ci DEFAULT NULL;

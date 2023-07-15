@@ -101,8 +101,12 @@
                     <td>{{ !empty($member->member->job) ? $member->member->job : ''}}</td>
                     <th>{{translate('Salary')}}</th>
                     <td>{{ !empty($member->member->salary) ? $member->member->salary : ''}}</td>
-                    
-
+                </tr>
+                <tr>
+                    <th>{{translate('Religion')}}</th>
+                    <td>{{ !empty($member->member->religion) ? $member->member->religion : ''}}</td>
+                    <th>{{translate('Caste')}}</th>
+                    <td>{{ !empty($member->member->caste) ? $member->member->caste : ''}}</td>
                 </tr>
                 </table>
             </div>

@@ -175,6 +175,8 @@ class MemberController extends Controller
             $member->marital_status_id          = $request->marital_status;
             $member->job                        = $request->job;
             $member->salary                     = $request->salary;
+            $member->religion                   = $request->religion;
+            $member->caste                      = $request->caste;
             $member->birthday                   = date('Y-m-d', strtotime($request->date_of_birth));
 
             $package                                = Package::where('id',$request->package)->first();
@@ -201,16 +203,16 @@ class MemberController extends Controller
 
 
 
-            // $spiritual_backgrounds = SpiritualBackground::where('user_id', $id)->first();
-        //  if(empty($spiritual_backgrounds)){
-             $spiritual_backgrounds          = new SpiritualBackground;
-             $spiritual_backgrounds->user_id = $user->id;
-        //  }
+        //     // $spiritual_backgrounds = SpiritualBackground::where('user_id', $id)->first();
+        // //  if(empty($spiritual_backgrounds)){
+        //      $spiritual_backgrounds          = new SpiritualBackground;
+        //      $spiritual_backgrounds->user_id = $user->id;
+        // //  }
         
-        $spiritual_backgrounds->religion_id        = $request->member_religion_id;
-        $spiritual_backgrounds->caste_id           = $request->member_caste_id;
-        $spiritual_backgrounds->sub_caste_id       = 1;
-        $spiritual_backgrounds->save();
+        // $spiritual_backgrounds->religion_id        = $request->member_religion_id;
+        // $spiritual_backgrounds->caste_id           = $request->member_caste_id;
+        // $spiritual_backgrounds->sub_caste_id       = 1;
+        // $spiritual_backgrounds->save();
 
 
 
@@ -379,6 +381,8 @@ class MemberController extends Controller
         $member->children           = $request->children;
         $member->job                        = $request->job;
         $member->salary                     = $request->salary;
+        $member->religion                   = $request->religion;
+        $member->caste                      = $request->caste;
 
         if($member->save())
         {
