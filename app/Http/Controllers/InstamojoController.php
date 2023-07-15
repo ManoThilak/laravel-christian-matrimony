@@ -15,19 +15,19 @@ class InstamojoController extends Controller
    public function pay($request){
        if(Session::has('payment_type')){
 
-           if(get_setting('instamojo_sandbox') == 1){
-               // testing_url
-               $endPoint = 'https://test.instamojo.com/api/1.1/';
-           }
-           else{
-               // live_url
+        //    if(get_setting('instamojo_sandbox') == 1){
+        //        // testing_url
+        //        $endPoint = 'https://test.instamojo.com/api/1.1/';
+        //    }
+        //    else{
+        //        // live_url
                $endPoint = 'https://www.instamojo.com/api/1.1/';
-           }
+        //    }
 
            $api = new \Instamojo\Instamojo(
-                env('INSTAMOJO_API_KEY'),
-                env('INSTAMOJO_AUTH_TOKEN'),
-                $endPoint
+                '166b51d49e1bd2e478e11361fe04a482',
+                '57b0620d164e7e93f8bcc1f37b5d3e22',
+                'https://www.instamojo.com/api/1.1/'
               );
 
         //    if (Session::get('payment_type') == 'package_payment') {

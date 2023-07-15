@@ -13,7 +13,7 @@
         "barryvdh/laravel-ide-helper": "^2.10",
         "fruitcake/laravel-cors": "^1.0",
         "guzzlehttp/guzzle": "^7.3",
-        "instamojo/instamojo-php": "^0.4.0",
+        "instamojo/instamojo-php": "^0.4",
         "intervention/image": "^2.5",
         "laracasts/flash": "^3.1",
         "laracon21/colorcodeconverter": "1.2",
