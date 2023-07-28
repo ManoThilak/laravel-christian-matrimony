@@ -29,6 +29,7 @@ use App\Models\MaritalStatus;
 use App\Models\Country;
 use App\Models\State;
 use App\Models\City;
+use Storage;
 
 class RegisterController extends Controller
 {
@@ -110,6 +111,7 @@ class RegisterController extends Controller
                 'code'        => unique_code(),
                 'approved'    => $approval,
                 'membership'    => 2,
+                'photo'    => $data['photo'],
             ]);
         // }
         // else{
@@ -228,6 +230,24 @@ class RegisterController extends Controller
 
     public function register(Request $request)
     {
+        // $file = $request->image;
+        // // @dd($file);
+        // // $path = $file->store('uploads/all', 'local');
+        // $path = $request->file('image')->store('uploads/all', 'local');
+
+        // // if($data['file']){
+        //     // $files = $data['image'];
+             
+        //     // //  $path = $files->store('uploads/all', 'local');
+        //     //  $name='ki';  
+            
+        //     // $files->move('uploads',$name); 
+        //     @dd($path);
+        //     // Save file information to the database
+        //     // $originalName = $file->getClientOriginalName();
+        // // }
+
+
         // if (filter_var($request->email, FILTER_VALIDATE_EMAIL)) {
             if(User::where('email', $request->email)->first() != null){
                 flash(translate('Phone already exists.'));

@@ -332,6 +332,22 @@
                                             </div>
                                         </div>
                                         <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="form-group mb-3">
+                                                    <label class="form-label" for="signinSrEmail">{{translate('photo')}} (800x800)</label>
+                                                    <div class="input-group" data-toggle="aizuploader" data-type="image">
+                                                        <div class="input-group-prepend">
+                                                            <div class="input-group-text bg-soft-secondary font-weight-medium" style="color:white;">{{ translate('Browse')}}</div>
+                                                        </div>
+                                                        <div class="form-control file-amount">{{ translate('Choose File') }}</div>
+                                                        <input type="hidden" name="photo" id="photo" class="selected-files">
+                                                    </div>
+                                                    <div class="file-preview box sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
                                             <div class="col-lg-6">
                                                 <div class="form-group mb-3">
                                                     <label class="form-label"
@@ -357,6 +373,7 @@
                                             </div>
                                         </div>
                                         
+                                        {{-- <input type="file" name="image"> --}}
                                         @if (addon_activation('referral_system'))
                                             <div class="row">
                                                 <div class="col-lg-12">

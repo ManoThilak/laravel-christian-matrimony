@@ -8,6 +8,7 @@ use Response;
 use Auth;
 use Storage;
 use Image;
+use App\User;
 
 class AizUploadController extends Controller
 {
@@ -145,9 +146,17 @@ class AizUploadController extends Controller
                     unlink(base_path('public/').$path);
                 }
 
+                if(!Auth::check()){
+                    $last_id = User::latest('id')->pluck('id')->first();
+                    $last_id = $last_id + 1;
+                    // $last_id = 91;
+                } else {
+                    $last_id = Auth::user()->id; 
+                }
+
                 $upload->extension = $extension;
                 $upload->file_name = $path;
-                $upload->user_id = Auth::user()->id;
+                $upload->user_id = $last_id;
                 $upload->type = $type[$upload->extension];
                 $upload->file_size = $size;
                 $upload->save();
@@ -158,7 +167,30 @@ class AizUploadController extends Controller
 
     public function get_uploaded_files(Request $request)
     {
-        $uploads = Upload::where('user_id', Auth::user()->id);
+        if(!Auth::check()){
+            $last_id = User::latest('id')->pluck('id')->first();
+            $last_id = $last_id + 1;
+            // $last_id = 91;
+       } else {
+            $last_id = Auth::user()->id; 
+       }
+        
+
+       // if(!Auth::check()){
+       //      $last_id = User::latest('id')->pluck('id')->first();
+       //      $last_id = $last_id + 1;
+       //      // $last_id = 91;
+       //      $uploads = Upload::where('user_id', 0);
+       // } else {
+       //      $last_id = Auth::user()->id; 
+       //      if(auth()->user()->user_type == 'staff' || auth()->user()->user_type == 'admin'){
+       //          $uploads = Upload::where('user_id', $last_id);
+       //      } else {
+       //          $uploads = Upload::where('user_id', 0);
+       //      }
+       // }
+        
+        $uploads = Upload::where('user_id', $last_id);
         if ($request->search != null) {
             $uploads->where('file_original_name', 'like', '%'.$request->search.'%');
         }
