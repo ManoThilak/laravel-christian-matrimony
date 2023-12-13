@@ -758,16 +758,17 @@
                                     <ul class="list-group list-group-raw fs-15 mb-5">
                                         <li class="list-group-item py-2">
                                             <i class="las la-check text-success mr-2"></i>
+                                            {{ $package->contact }} Contact No's View
+                                        </li>
+                                        <li class="list-group-item py-2">
+                                            <i class="las la-check text-success mr-2"></i>
                                             {{ $package->express_interest }} {{ translate('Express Interests') }}
                                         </li>
                                         <li class="list-group-item py-2">
                                             <i class="las la-check text-success mr-2"></i>
                                             {{ $package->photo_gallery }} {{ translate('Gallery Photo Upload') }}
                                         </li>
-                                        <li class="list-group-item py-2">
-                                            <i class="las la-check text-success mr-2"></i>
-                                            {{ $package->contact }} {{ translate('Contact Info View') }}
-                                        </li>
+                                        
                                         <li class="list-group-item py-2 text-line-through">
                                             @if ($package->auto_profile_match == 0)
                                                 <i class="las la-times text-danger mr-2"></i>
